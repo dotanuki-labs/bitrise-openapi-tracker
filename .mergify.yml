@@ -1,0 +1,20 @@
+# Adapted from https://docs.mergify.com/examples
+# Validate your changes with:
+# $> curl -F 'data=@.mergify.yml' https://gh.mergify.io/validate/
+
+pull_request_rules:
+  - name: Automatic merge for Renovate PRs
+    conditions:
+      - author~=^renovate\[bot\]$
+      - check-success=checks
+    actions:
+      merge:
+        method: squash
+
+  - name: Be author's friend
+    conditions:
+      - author~=ubiratansoares
+      - check-success=checks
+    actions:
+      merge:
+        method: squash

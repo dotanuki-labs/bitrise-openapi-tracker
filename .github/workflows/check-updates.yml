@@ -1,0 +1,19 @@
+
+name: Bitrise API
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-changes:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Project Checkout
+        uses: actions/checkout@v4.1.0
+
+      - name: Run tests
+        run: ./check-bitrise-api.sh
