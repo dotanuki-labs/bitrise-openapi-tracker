@@ -15,5 +15,5 @@ jobs:
       - name: Project Checkout
         uses: actions/checkout@v4.1.0
 
-      - name: Run tests
-        run: ./check-bitrise-api.sh
+      - name: Check changes and deploy on bump.sh
+        run: ./check-bitrise-api.sh ${{ secrets.BUMPSH_TOKEN }}
