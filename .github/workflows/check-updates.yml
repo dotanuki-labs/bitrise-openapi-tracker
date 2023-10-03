@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v4.1.0
 
       - name: Run tests
-        run: ./check-bitrise-api.sh
+        run: ./check-bitrise-api.sh ${{ secrets.BUMPSH_TOKEN }}
