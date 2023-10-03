@@ -11,6 +11,14 @@ pull_request_rules:
       merge:
         method: squash
 
+  - name: Automatic merge for GHA PRs
+    conditions:
+      - author~=github-actions
+      - check-success=check-changes
+    actions:
+      merge:
+        method: squash
+
   - name: Be author's friend
     conditions:
       - author~=ubiratansoares
