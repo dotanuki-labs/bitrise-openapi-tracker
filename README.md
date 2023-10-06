@@ -6,15 +6,15 @@ A companion automation to track changes on [Bitrise REST API](https://devcenter.
 
 ## How
 
-Changes are tracked no top of [bump.sh](https://bump.sh/), one of the best tools in the market to create outstanding API docs from OpenAPI specs.
+Changes are tracked on top of [bump.sh](https://bump.sh/), one of the best tools out there to create outstanding API docs from OpenAPI specs.
 
-> Disclaimer : I'm not sponsored by this tool
+> Disclaimer : I'm not sponsored by this tool 💸
 
-`bump.sh` offers a nice feature where diffs between OpenAPI fiels are tracked in a changelog-like fashion. This is useful for ever-evolving API generated automatically by the underlying tooling where not necessarily we have updates properly versioned in the spec itself.
+`bump.sh` offers a nice feature where diffs between deploys are tracked in a changelog fashion. This is useful for ever-evolving API usually generated automatically and not necessarily properly versioned.
 
 This automation will do a dailly check Bitrise OpenAPI reference and
 
-- Deploy changes on `bump.sh`
+- Deploy changes on `bump.sh`, if any
 - Update the spec itself in this repo
 
 You can find changelogs related to Bitrise API
