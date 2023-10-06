@@ -1,6 +1,6 @@
-#  Bitrise REST API tracker
+#  Bitrise REST API tracker 🤖
 
-# What
+## What
 
 A companion automation to track changes on [Bitrise REST API](https://devcenter.bitrise.io/en/api/api-reference.html).
 
@@ -8,9 +8,11 @@ A companion automation to track changes on [Bitrise REST API](https://devcenter.
 
 Changes are tracked no top of [bump.sh](https://bump.sh/), one of the best tools in the market to create outstanding API docs from OpenAPI specs.
 
-Luckily for us, `bump.sh` offers a nice feature where diffs between OpenAPI spec are tracked in a changelog-like fashion. This is useful for ever-evolving API generated automatically by the underlying tooling where not necessarily we have updates properly versioned in the spec itself.
+> Disclaimer : I'm not sponsored by this tool
 
-This automation will do a dailly check Bitrise OpenAPI spec and
+`bump.sh` offers a nice feature where diffs between OpenAPI fiels are tracked in a changelog-like fashion. This is useful for ever-evolving API generated automatically by the underlying tooling where not necessarily we have updates properly versioned in the spec itself.
+
+This automation will do a dailly check Bitrise OpenAPI reference and
 
 - Deploy changes on `bump.sh`
 - Update the spec itself in this repo
