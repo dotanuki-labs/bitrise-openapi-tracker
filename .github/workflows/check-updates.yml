@@ -19,11 +19,3 @@ jobs:
 
       - name: Check changes and deploy on bump.sh
         run: ./check-bitrise-api.sh ${{ secrets.BUMPSH_TOKEN }}
-
-      - name: Create PR on changes
-        if: github.ref == 'refs/heads/main'
-        uses: peter-evans/create-pull-request@v5.0.2
-        with:
-          add-paths: bitrise-swagger.json
-          commit-message: 'Updates Bitrise Swagger file'
-          branch: 'gha/update-bitrise-swagger'
